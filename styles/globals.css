@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --error: #e75454;
+  --error-ls: #ffdddd;
+
+  --warning: #df7411;
+  --warning-ls: #ffeddd;
+
+  --success: #1bc62c;
+  --success-ls: #ddffe1;
+
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #828282;
+
+  /* PRIMARY COLORS */
+  --color1: #ffc700;
+  --color1-tint: #ffe68e;
+  --color1-dark: #493900;
+
+  --color2: #581bff;
+  --color2-tint: #b59afd;
+  --color2-dark: #15004f;
+  /* END OF PRIMARY COLORS */
+
+  /* FONT FAMILIES */
+  --font-primary: "Open Sans", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+}
+html,
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  font-family: var(--font-secondary);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+#nprogress .bar {
+  background: var(--color2) !important;
+}
+
+.btn-primary {
+  @apply text-3xl 2xl:text-base md:text-sm font-style1 bg-color1 
+  px-8 py-4 2xl:px-4 2xl:py-2 md:px-3 md:py-1 
+  rounded border-2 border-color1-dark hover:opacity-50 hover:scale-110 duration-500;
+}
+
+.btn-secondary {
+  @apply text-3xl 2xl:text-base md:text-sm font-style1 bg-white 
+ px-8 py-4 2xl:px-4 2xl:py-2 md:px-3 md:py-1 
+ rounded border-2 border-color1-dark hover:opacity-50 hover:scale-110 duration-500;
+}
+
+.btn-tertiary {
+  @apply text-3xl 2xl:text-base md:text-sm font-style1 bg-color1-dark text-white px-8 py-2 md:px-6 md:py-2 rounded hover:opacity-50 hover:scale-110 duration-500;
+}
+
+.heading {
+  @apply text-7xl md:text-4xl font-style1 text-color1-dark font-black;
+}
+
+.heading-2 {
+  @apply text-5xl md:text-4xl font-style1 font-semibold;
+}
+
+.sub-heading {
+  @apply text-xl md:text-lg font-style1 font-semibold;
+}
+.summary {
+  @apply text-xl md:text-base font-style1 font-light;
+}
+.description {
+  @apply text-xl md:text-base font-style1 font-light text-gray font-normal;
+}
+.sub-description {
+  @apply leading-tight text-base 2xl:text-sm md:text-xs font-style1 font-light text-gray font-normal;
+}
+
+input[type="file"] {
+  display: none;
+}
